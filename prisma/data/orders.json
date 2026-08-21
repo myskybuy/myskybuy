@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "userId": null,
+    "items": [
+      {
+        "id": 67,
+        "name": "Luxury Series 18-Inch Cabin Trolley Bag - Faux Leather | 45L | Olive",
+        "image": "https://myskybuy.in/wp-content/uploads/2026/07/1755076911075_White_20Background.jpg",
+        "salePrice": 5222,
+        "qty": 1
+      }
+    ],
+    "customerName": "YOGENDRA PRATAP SINGH",
+    "phone": "0989898987",
+    "address": "Hindpuram Colony Near Civil line Mainpuri",
+    "email": "yogendrapratap.cc@gmail.com",
+    "subtotal": 5222,
+    "couponCode": "",
+    "discount": 0,
+    "total": 5222,
+    "paymentMethod": "COD",
+    "status": "Pending",
+    "createdAt": "2026-08-19T11:25:42.665Z"
+  }
+]

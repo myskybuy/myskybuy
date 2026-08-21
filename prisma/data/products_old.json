@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "Northcraft Trail 24L Laptop Backpack",
+    "category": "Backpacks",
+    "brand": "Northcraft",
+    "price": 3499,
+    "salePrice": 2099,
+    "image": "https://picsum.photos/seed/msb-p1/600/600",
+    "stock": 26,
+    "description": "A 24L everyday backpack with a padded 15.6\" laptop sleeve, water-resistant fabric and a structured silhouette built for the daily commute."
+  },
+  {
+    "id": 2,
+    "name": "Urban Trail Weekender Backpack",
+    "category": "Backpacks",
+    "brand": "Urban Trail Co.",
+    "price": 2999,
+    "salePrice": 1799,
+    "image": "https://picsum.photos/seed/msb-p2/600/600",
+    "stock": 19,
+    "description": "Soft-structured weekender backpack with multiple organiser pockets, perfect for short trips and everyday carry."
+  },
+  {
+    "id": 3,
+    "name": "CityFold Anti-Theft Backpack",
+    "category": "Backpacks",
+    "brand": "CityFold",
+    "price": 2599,
+    "salePrice": 1559,
+    "image": "https://picsum.photos/seed/msb-p3/600/600",
+    "stock": 31,
+    "description": "Hidden zip anti-theft backpack with a USB charging port and breathable back panel for long commutes."
+  },
+  {
+    "id": 4,
+    "name": "Wayline Explorer Travel Backpack 35L",
+    "category": "Backpacks",
+    "brand": "Wayline",
+    "price": 4299,
+    "salePrice": 2999,
+    "image": "https://picsum.photos/seed/msb-p4/600/600",
+    "stock": 14,
+    "description": "35L expandable travel backpack with a rain cover and shoe compartment, built for weekend getaways."
+  },
+  {
+    "id": 5,
+    "name": "Hydor Green Leather Backpack",
+    "category": "Backpacks",
+    "brand": "Hidepoint",
+    "price": 15995,
+    "salePrice": 11196,
+    "image": "https://picsum.photos/seed/msb-p5/600/600",
+    "stock": 6,
+    "description": "Premium full-grain leather backpack with twin front pockets and canvas top handles — a statement piece for work and travel."
+  },
+  {
+    "id": 6,
+    "name": "Emily Tiara Small Satchel Bag",
+    "category": "Handbags & Totes",
+    "brand": "Hidepoint",
+    "price": 3799,
+    "salePrice": 2279,
+    "image": "https://picsum.photos/seed/msb-p6/600/600",
+    "stock": 22,
+    "description": "A structured small satchel with a woven top handle and adjustable strap — polished enough for the office, light enough for everyday."
+  },
+  {
+    "id": 7,
+    "name": "MySkyBuy Duo Tote & Pouch Combo",
+    "category": "Handbags & Totes",
+    "brand": "MySkyBuy Originals",
+    "price": 4299,
+    "salePrice": 3009,
+    "image": "https://picsum.photos/seed/msb-p7/600/600",
+    "stock": 17,
+    "description": "A spacious tote paired with a matching mini pouch — stylish and durable, built for daily errands."
+  },
+  {
+    "id": 8,
+    "name": "Northcraft Denim Tote & Sling Set",
+    "category": "Handbags & Totes",
+    "brand": "Northcraft",
+    "price": 6498,
+    "salePrice": 5199,
+    "image": "https://picsum.photos/seed/msb-p8/600/600",
+    "stock": 9,
+    "description": "A curated combo of a printed denim-blue tote and matching sling — stylish, durable and lightweight."
+  },
+  {
+    "id": 9,
+    "name": "CityFold Everyday Handbag",
+    "category": "Handbags & Totes",
+    "brand": "CityFold",
+    "price": 3299,
+    "salePrice": 2309,
+    "image": "https://picsum.photos/seed/msb-p9/600/600",
+    "stock": 25,
+    "description": "A medium handbag with a roomy interior, secure zip closure and detachable sling strap."
+  },
+  {
+    "id": 10,
+    "name": "Wayline Single Shoulder Sling Bag",
+    "category": "Slings & Crossbody",
+    "brand": "Wayline",
+    "price": 2599,
+    "salePrice": 1949,
+    "image": "https://picsum.photos/seed/msb-p10/600/600",
+    "stock": 33,
+    "description": "A unisex single-shoulder sling with a padded 10.6-inch tablet compartment, ideal for quick city trips."
+  },
+  {
+    "id": 11,
+    "name": "Urban Trail Crossbody Sling",
+    "category": "Slings & Crossbody",
+    "brand": "Urban Trail Co.",
+    "price": 1999,
+    "salePrice": 1399,
+    "image": "https://picsum.photos/seed/msb-p11/600/600",
+    "stock": 28,
+    "description": "A lightweight crossbody sling with an adjustable strap and multiple compartments for essentials on the move."
+  },
+  {
+    "id": 12,
+    "name": "Electra Blue Leather Sling Bag",
+    "category": "Slings & Crossbody",
+    "brand": "Hidepoint",
+    "price": 10995,
+    "salePrice": 6597,
+    "image": "https://picsum.photos/seed/msb-p12/600/600",
+    "stock": 7,
+    "description": "A textured leather sling bag with a braided handle and tassel detail — an everyday-luxe pick."
+  },
+  {
+    "id": 13,
+    "name": "CityFold Mini Sling Pouch",
+    "category": "Slings & Crossbody",
+    "brand": "CityFold",
+    "price": 1499,
+    "salePrice": 999,
+    "image": "https://picsum.photos/seed/msb-p13/600/600",
+    "stock": 40,
+    "description": "A compact sling pouch for cards, keys and a phone — a grab-and-go essential."
+  },
+  {
+    "id": 14,
+    "name": "Hydor Blue Leather Bi-Fold Wallet",
+    "category": "Wallets & Purses",
+    "brand": "Hidepoint",
+    "price": 2495,
+    "salePrice": 1746,
+    "image": "https://picsum.photos/seed/msb-p14/600/600",
+    "stock": 45,
+    "description": "A textured leather bi-fold wallet with multiple card slots and a coin pocket."
+  },
+  {
+    "id": 15,
+    "name": "Hydor Tan Leather Bi-Fold Wallet",
+    "category": "Wallets & Purses",
+    "brand": "Hidepoint",
+    "price": 2895,
+    "salePrice": 2026,
+    "image": "https://picsum.photos/seed/msb-p15/600/600",
+    "stock": 38,
+    "description": "A classic tan leather bi-fold wallet finished with contrast stitching."
+  },
+  {
+    "id": 16,
+    "name": "Northcraft Slim Card Holder",
+    "category": "Wallets & Purses",
+    "brand": "Northcraft",
+    "price": 999,
+    "salePrice": 699,
+    "image": "https://picsum.photos/seed/msb-p16/600/600",
+    "stock": 60,
+    "description": "A slim, pocket-friendly card holder with RFID-safe lining."
+  },
+  {
+    "id": 17,
+    "name": "Urban Trail Zip-Around Purse",
+    "category": "Wallets & Purses",
+    "brand": "Urban Trail Co.",
+    "price": 1799,
+    "salePrice": 1259,
+    "image": "https://picsum.photos/seed/msb-p17/600/600",
+    "stock": 29,
+    "description": "A zip-around purse with a dedicated phone pocket and wristlet strap."
+  },
+  {
+    "id": 18,
+    "name": "Ace Cabin Hard Luggage Trolley",
+    "category": "Travel & Luggage",
+    "brand": "Wayline",
+    "price": 12000,
+    "salePrice": 9000,
+    "image": "https://picsum.photos/seed/msb-p18/600/600",
+    "stock": 12,
+    "description": "A hard-shell cabin trolley with 360° spinner wheels and a combination lock."
+  },
+  {
+    "id": 19,
+    "name": "Aisle Cabin Pro Trolley",
+    "category": "Travel & Luggage",
+    "brand": "Wayline",
+    "price": 12999,
+    "salePrice": 6499,
+    "image": "https://picsum.photos/seed/msb-p19/600/600",
+    "stock": 10,
+    "description": "A front-opening cabin trolley with a laptop compartment for quick airport security checks."
+  },
+  {
+    "id": 20,
+    "name": "Overnighter Cabin Luggage",
+    "category": "Travel & Luggage",
+    "brand": "Northcraft",
+    "price": 18999,
+    "salePrice": 11999,
+    "image": "https://picsum.photos/seed/msb-p20/600/600",
+    "stock": 8,
+    "description": "A premium overnighter cabin case with a soft-touch shell and an expandable main compartment."
+  }
+]

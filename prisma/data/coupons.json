@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "code": "WELCOME10",
+    "type": "percent",
+    "value": 10,
+    "minOrder": 999,
+    "active": true,
+    "expiry": "2026-12-31"
+  },
+  {
+    "id": 2,
+    "code": "AZADI15",
+    "type": "percent",
+    "value": 15,
+    "minOrder": 1500,
+    "active": true,
+    "expiry": "2026-08-31"
+  }
+]

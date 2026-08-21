@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Backpacks",
+    "image": "https://picsum.photos/seed/msb-backpacks/500/500"
+  },
+  {
+    "id": 2,
+    "name": "Handbags & Totes",
+    "image": "https://picsum.photos/seed/msb-handbags/500/500"
+  },
+  {
+    "id": 3,
+    "name": "Slings & Crossbody",
+    "image": "https://picsum.photos/seed/msb-slings/500/500"
+  },
+  {
+    "id": 4,
+    "name": "Wallets & Purses",
+    "image": "https://picsum.photos/seed/msb-wallets/500/500"
+  },
+  {
+    "id": 5,
+    "name": "Travel & Luggage",
+    "image": "https://picsum.photos/seed/msb-luggage/500/500"
+  }
+]
