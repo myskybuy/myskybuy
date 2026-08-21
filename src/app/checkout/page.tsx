@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Script from "next/script";
 import { useEffect, useState } from "react";
 import AuthModal from "@/components/AuthModal";
 import SiteFooter from "@/components/SiteFooter";
@@ -155,7 +154,6 @@ export default function CheckoutPage() {
 
   return (
     <StoreShell>
-      <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       <SiteHeader showSearch={false} />
       <AuthModal
         open={showAuthModal}
@@ -238,24 +236,11 @@ export default function CheckoutPage() {
                     <small>Pay when your order arrives</small>
                   </span>
                 </label>
-                <label className={`payment-option ${!razorpayEnabled ? "disabled" : ""}`}>
-                  <input
-                    type="radio"
-                    name="pay"
-                    checked={paymentMethod === "RAZORPAY"}
-                    onChange={() => setPaymentMethod("RAZORPAY")}
-                    disabled={!razorpayEnabled}
-                  />
-                  <span>
-                    <strong>Pay online (UPI / Card / Netbanking)</strong>
-                    <small>{razorpayEnabled ? "Secured by Razorpay" : "Not configured — add Razorpay keys in .env"}</small>
-                  </span>
-                </label>
               </div>
             </div>
 
             <button className="btn btn-accent" style={{ marginTop: 20, width: "100%" }} onClick={placeOrder}>
-              {paymentMethod === "RAZORPAY" ? "Pay & place order" : "Place order (COD)"}
+              Place order (COD)
             </button>
           </>
         ) : authChecked ? (
