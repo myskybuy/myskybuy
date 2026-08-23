@@ -1,12 +1,12 @@
 import Link from "next/link";
+import SafeImage from "@/components/SafeImage";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import StoreShell from "@/components/StoreShell";
 import { COMPANY } from "@/lib/policies";
 
-const HERO_IMG = "https://myskybuy.in/wp-content/uploads/2026/07/The-Jazz-Tote_CN_1.jpg";
-const WHO_IMG =
-  "https://myskybuy.in/wp-content/uploads/2026/07/The-Overnighter-Backpack_Homegrown-1_e040e875-3213-4c77-af88-432d73b875c4.jpg";
+const HERO_IMG = "/images/about/hero.jpg";
+const WHO_IMG = "/images/about/who.jpg";
 
 const offers = [
   {
@@ -76,7 +76,7 @@ export default function AboutPage() {
             </Link>
           </div>
           <div className="about-media">
-            <img src={HERO_IMG} alt="MySkyBuy handbag" />
+            <SafeImage src={HERO_IMG} alt="MySkyBuy handbag" />
           </div>
         </div>
       </section>
@@ -85,7 +85,7 @@ export default function AboutPage() {
       <section className="about-who">
         <div className="container about-split reverse">
           <div className="about-media">
-            <img src={WHO_IMG} alt="MySkyBuy backpack" />
+            <SafeImage src={WHO_IMG} alt="MySkyBuy backpack" />
           </div>
           <div className="about-copy">
             <p className="about-eyebrow teal">Who We Are</p>

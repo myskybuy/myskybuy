@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
+import OtpStep from "@/components/OtpStep";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import StoreShell from "@/components/StoreShell";
@@ -17,8 +19,7 @@ export default function AccountPage() {
   const [signupName, setSignupName] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
-  const [loginError, setLoginError] = useState("");
-  const [signupError, setSignupError] = useState("");
+  const [otpEmail, setOtpEmail] = useState<string | null>(null);
   const [orders, setOrders] = useState<Order[]>([]);
 
   async function loadAccount() {
@@ -35,32 +36,42 @@ export default function AccountPage() {
   }, []);
 
   async function doLogin() {
-    setLoginError("");
     const res = await fetch("/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: loginEmail, password: loginPassword }),
     });
     const data = await res.json();
-    if (data.success) loadAccount();
-    else setLoginError(data.error || "Login failed");
+    if (data.needsOtp && data.email) {
+      toast.success("Verification code sent");
+      setOtpEmail(data.email);
+    } else if (data.success) {
+      toast.success("Logged in");
+      loadAccount();
+    } else {
+      toast.error(data.error || "Login failed");
+    }
   }
 
   async function doSignup() {
-    setSignupError("");
     const res = await fetch("/api/auth/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: signupName, email: signupEmail, password: signupPassword }),
     });
     const data = await res.json();
-    if (data.success) loadAccount();
-    else setSignupError(data.error || "Sign up failed");
+    if (data.success) {
+      toast.success("Account created. You're logged in.");
+      loadAccount();
+    } else {
+      toast.error(data.error || "Sign up failed");
+    }
   }
 
   async function doLogout() {
     await fetch("/api/auth/logout", { method: "POST" });
     setOrders([]);
+    toast.success("Logged out");
     loadAccount();
   }
 
@@ -109,50 +120,63 @@ export default function AccountPage() {
     <StoreShell>
       <SiteHeader showSearch={false} />
       <div className="account-page">
-        <h2>My Account</h2>
-        <div className="account-tabs">
-          <button className={tab === "login" ? "active" : ""} onClick={() => setTab("login")}>
-            Log in
-          </button>
-          <button className={tab === "signup" ? "active" : ""} onClick={() => setTab("signup")}>
-            Sign up
-          </button>
-        </div>
+        <h2>{otpEmail ? "Verify email" : "My Account"}</h2>
+        {otpEmail ? (
+          <OtpStep
+            email={otpEmail}
+            purpose="login"
+            onVerified={() => {
+              setOtpEmail(null);
+              loadAccount();
+            }}
+            onBack={() => setOtpEmail(null)}
+          />
+        ) : null}
+        {otpEmail ? null : (
+          <>
+            <div className="account-tabs">
+              <button className={tab === "login" ? "active" : ""} onClick={() => setTab("login")}>
+                Log in
+              </button>
+              <button className={tab === "signup" ? "active" : ""} onClick={() => setTab("signup")}>
+                Sign up
+              </button>
+            </div>
 
-        {tab === "login" ? (
-          <div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="you@example.com" />
-            </div>
-            <div className="form-group">
-              <label>Password</label>
-              <input type="password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} placeholder="Your password" />
-            </div>
-            <button className="btn btn-accent" style={{ width: "100%" }} onClick={doLogin}>
-              Log in
-            </button>
-            {loginError ? <p className="account-error">{loginError}</p> : null}
-          </div>
-        ) : (
-          <div>
-            <div className="form-group">
-              <label>Full name</label>
-              <input type="text" value={signupName} onChange={(e) => setSignupName(e.target.value)} placeholder="Your name" />
-            </div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" value={signupEmail} onChange={(e) => setSignupEmail(e.target.value)} placeholder="you@example.com" />
-            </div>
-            <div className="form-group">
-              <label>Password</label>
-              <input type="password" value={signupPassword} onChange={(e) => setSignupPassword(e.target.value)} placeholder="At least 6 characters" />
-            </div>
-            <button className="btn btn-accent" style={{ width: "100%" }} onClick={doSignup}>
-              Create account
-            </button>
-            {signupError ? <p className="account-error">{signupError}</p> : null}
-          </div>
+            {tab === "login" ? (
+              <div>
+                <div className="form-group">
+                  <label>Email</label>
+                  <input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="you@example.com" />
+                </div>
+                <div className="form-group">
+                  <label>Password</label>
+                  <input type="password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} placeholder="Your password" />
+                </div>
+                <button className="btn btn-accent" style={{ width: "100%" }} onClick={doLogin}>
+                  Log in
+                </button>
+              </div>
+            ) : (
+              <div>
+                <div className="form-group">
+                  <label>Full name</label>
+                  <input type="text" value={signupName} onChange={(e) => setSignupName(e.target.value)} placeholder="Your name" />
+                </div>
+                <div className="form-group">
+                  <label>Email</label>
+                  <input type="email" value={signupEmail} onChange={(e) => setSignupEmail(e.target.value)} placeholder="you@example.com" />
+                </div>
+                <div className="form-group">
+                  <label>Password</label>
+                  <input type="password" value={signupPassword} onChange={(e) => setSignupPassword(e.target.value)} placeholder="At least 6 characters" />
+                </div>
+                <button className="btn btn-accent" style={{ width: "100%" }} onClick={doSignup}>
+                  Create account
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
       <SiteFooter />

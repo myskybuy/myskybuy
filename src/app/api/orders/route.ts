@@ -128,16 +128,21 @@ export async function POST(req: NextRequest) {
       session.userId
     );
 
-    sendOrderConfirmationEmail({
-      id: order.id,
-      email: order.email,
-      customerName: order.customerName,
-      items: items as OrderItem[],
-      total: order.total,
-      paymentMethod: "Cash on Delivery",
-    });
+    let emailSent = false;
+    try {
+      emailSent = await sendOrderConfirmationEmail({
+        id: order.id,
+        email: order.email,
+        customerName: order.customerName,
+        items: items as OrderItem[],
+        total: order.total,
+        paymentMethod: "Cash on Delivery",
+      });
+    } catch (err) {
+      console.error("[orders] confirmation email failed", err);
+    }
 
-    return NextResponse.json({ success: true, orderId: order.id });
+    return NextResponse.json({ success: true, orderId: order.id, emailSent });
   } catch {
     return NextResponse.json({ error: "Unable to place order. Please try again." }, { status: 500 });
   }
@@ -182,16 +187,21 @@ export async function PUT(req: NextRequest) {
       },
     });
 
-    sendOrderConfirmationEmail({
-      id: updated.id,
-      email: updated.email,
-      customerName: updated.customerName,
-      items: updated.items as OrderItem[],
-      total: updated.total,
-      paymentMethod: "Online (Razorpay)",
-    });
+    let emailSent = false;
+    try {
+      emailSent = await sendOrderConfirmationEmail({
+        id: updated.id,
+        email: updated.email,
+        customerName: updated.customerName,
+        items: updated.items as OrderItem[],
+        total: updated.total,
+        paymentMethod: "Online (Razorpay)",
+      });
+    } catch (err) {
+      console.error("[orders] confirmation email failed", err);
+    }
 
-    return NextResponse.json({ success: true, orderId: updated.id });
+    return NextResponse.json({ success: true, orderId: updated.id, emailSent });
   } catch {
     return NextResponse.json({ error: "Payment verification failed. Please contact support." }, { status: 500 });
   }

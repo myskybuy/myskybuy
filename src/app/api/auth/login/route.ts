@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { isValidEmail, publicUser, verifyPassword } from "@/lib/password";
-import { getSession } from "@/lib/session";
+import { issueOtp } from "@/lib/otp";
+import { isValidEmail, verifyPassword } from "@/lib/password";
 
 export async function POST(req: NextRequest) {
   const { email, password } = await req.json();
@@ -19,9 +19,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid email or password" }, { status: 401 });
   }
 
-  const session = await getSession();
-  session.userId = user.id;
-  await session.save();
+  const otp = await issueOtp(cleanEmail, "login");
+  if (!otp.ok) {
+    return NextResponse.json({ error: otp.error }, { status: otp.status });
+  }
 
-  return NextResponse.json({ success: true, user: publicUser(user) });
+  return NextResponse.json({ success: true, needsOtp: true, email: cleanEmail, purpose: "login" });
 }

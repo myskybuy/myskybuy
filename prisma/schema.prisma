@@ -46,12 +46,24 @@ model Banner {
 }
 
 model User {
-  id           Int      @id @default(autoincrement())
-  name         String
-  email        String   @unique
-  passwordHash String
-  createdAt    DateTime @default(now())
-  orders       Order[]
+  id            Int      @id @default(autoincrement())
+  name          String
+  email         String   @unique
+  passwordHash  String
+  emailVerified Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  orders        Order[]
+}
+
+model OtpCode {
+  id        Int      @id @default(autoincrement())
+  email     String
+  codeHash  String
+  purpose   String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([email, purpose])
 }
 
 model Order {

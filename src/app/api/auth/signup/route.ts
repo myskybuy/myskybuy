@@ -20,19 +20,29 @@ export async function POST(req: NextRequest) {
   }
 
   const existing = await prisma.user.findUnique({ where: { email: cleanEmail } });
-  if (existing) {
+  if (existing?.emailVerified) {
     return NextResponse.json({ error: "An account already exists with this email. Please log in." }, { status: 409 });
   }
 
-  const user = await prisma.user.create({
-    data: { name: cleanName, email: cleanEmail, passwordHash: hashPassword(password) },
-  });
+  const user = existing
+    ? await prisma.user.update({
+        where: { id: existing.id },
+        data: { name: cleanName, passwordHash: hashPassword(password), emailVerified: true },
+      })
+    : await prisma.user.create({
+        data: {
+          name: cleanName,
+          email: cleanEmail,
+          passwordHash: hashPassword(password),
+          emailVerified: true,
+        },
+      });
 
   const session = await getSession();
   session.userId = user.id;
   await session.save();
 
-  sendWelcomeEmail(user);
+  await sendWelcomeEmail(user);
 
   return NextResponse.json({ success: true, user: publicUser(user) });
 }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 import AuthModal from "@/components/AuthModal";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -62,19 +63,21 @@ export default function CheckoutPage() {
       setDiscount(data.discount);
       setAppliedCode(data.code);
       setCouponMsg(`Coupon applied: -₹${data.discount}`);
+      toast.success(`Coupon applied: -₹${data.discount}`);
     } else {
       setDiscount(0);
       setAppliedCode("");
       setCouponMsg(data.error || "Invalid coupon");
+      toast.error(data.error || "Invalid coupon");
     }
   }
 
   async function placeOrder() {
     if (!user) return;
-    if (!cart.length) return alert("Cart is empty");
-    if (!name || !phone || !address) return alert("Please fill all required fields");
+    if (!cart.length) return toast.error("Cart is empty");
+    if (!name || !phone || !address) return toast.error("Please fill all required fields");
     if (paymentMethod === "RAZORPAY" && !razorpayEnabled) {
-      return alert("Online payment is not configured yet. Choose Cash on Delivery or contact support.");
+      return toast.error("Online payment is not configured yet. Choose Cash on Delivery or contact support.");
     }
 
     const payload = {
@@ -94,7 +97,7 @@ export default function CheckoutPage() {
       body: JSON.stringify(payload),
     });
     const data = await res.json();
-    if (!res.ok) return alert(data.error || "Order failed");
+    if (!res.ok) return toast.error(data.error || "Order failed");
 
     if (paymentMethod === "RAZORPAY" && data.razorpayOrderId && data.key) {
       const rzp = new window.Razorpay({
@@ -118,9 +121,10 @@ export default function CheckoutPage() {
           const verifyData = await verify.json();
           if (verify.ok) {
             clearCart();
+            toast.success("Payment successful");
             setSuccessId(verifyData.orderId);
           } else {
-            alert(verifyData.error || "Payment verification failed");
+            toast.error(verifyData.error || "Payment verification failed");
           }
         },
         prefill: { name, email, contact: phone },
@@ -131,6 +135,7 @@ export default function CheckoutPage() {
     }
 
     clearCart();
+    toast.success("Order placed");
     setSuccessId(data.orderId);
   }
 

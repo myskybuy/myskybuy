@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MySkyBuy">
+  <rect width="64" height="64" rx="14" fill="#0d5c53"/>
+  <path d="M18 28h28l3 22H15z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M24 28v-3c0-6 16-6 16 0v3" fill="none" stroke="#c9a227" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="32" y="58" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="7" font-weight="700">MSB</text>
+</svg>

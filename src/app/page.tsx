@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import FestivePopup from "@/components/FestivePopup";
 import ProductCard, { Product } from "@/components/ProductCard";
+import SafeImage from "@/components/SafeImage";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import StoreShell from "@/components/StoreShell";
@@ -103,7 +104,7 @@ export default function HomePage() {
                         className={`hero-slide ${index === heroIndex ? "active" : ""}`}
                       >
                         <div className="hero-slide-media">
-                          <img src={product.image} alt={product.name} loading={index === 0 ? "eager" : "lazy"} />
+                          <SafeImage src={product.image} alt={product.name} loading={index === 0 ? "eager" : "lazy"} />
                         </div>
                         <div className="hero-product-info">
                           <span>{product.brand || "MySkyBuy"}</span>
@@ -166,7 +167,7 @@ export default function HomePage() {
             {categories.map((c) => (
               <Link key={c.id} className="category-card" href={`/shop?category=${encodeURIComponent(c.name)}`}>
                 <div className="cc-thumb">
-                  <img src={c.image} alt={c.name} />
+                  <SafeImage src={c.image} alt={c.name} />
                 </div>
                 <div className="cc-name">{c.name}</div>
               </Link>

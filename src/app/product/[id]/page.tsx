@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 import { Product } from "@/components/ProductCard";
+import SafeImage from "@/components/SafeImage";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import StoreShell from "@/components/StoreShell";
@@ -50,7 +52,7 @@ export default function ProductPage() {
       <div className="product-page">
         <div className="product-gallery">
           {discount > 0 ? <span className="badge-sale">{discount}% OFF</span> : null}
-          <img src={product.image} alt={product.name} />
+          <SafeImage src={product.image} alt={product.name} />
         </div>
         <div className="product-info">
           <span className="brand">{product.brand}</span>
@@ -64,22 +66,25 @@ export default function ProductPage() {
             <label>Quantity</label>
             <input type="number" min={1} value={qty} onChange={(e) => setQty(Math.max(1, Number(e.target.value)))} />
           </div>
-          <button
-            className={`btn btn-accent ${feedback === "added" ? "added" : ""}`}
-            type="button"
-            onClick={() => {
-              addToCart(
-                { id: product.id, name: product.name, image: product.image, salePrice: product.salePrice },
-                qty
-              );
-              setFeedback("added");
-            }}
-          >
-            {btnLabel}
-          </button>
-          <Link href="/cart" className="btn btn-outline" style={{ marginLeft: 10 }}>
-            Go to cart
-          </Link>
+          <div className="product-actions">
+            <button
+              className={`btn btn-accent ${feedback === "added" ? "added" : ""}`}
+              type="button"
+              onClick={() => {
+                addToCart(
+                  { id: product.id, name: product.name, image: product.image, salePrice: product.salePrice },
+                  qty
+                );
+                setFeedback("added");
+                toast.success("Item added to cart");
+              }}
+            >
+              {btnLabel}
+            </button>
+            <Link href="/cart" className="btn btn-outline">
+              Go to cart
+            </Link>
+          </div>
         </div>
       </div>
       <SiteFooter />

@@ -1,6 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { toast } from "sonner";
+import OtpStep from "@/components/OtpStep";
 
 type User = { id: number; name: string; email: string };
 
@@ -25,14 +27,13 @@ export default function AuthModal({
   const [signupName, setSignupName] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
-  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [otpEmail, setOtpEmail] = useState<string | null>(null);
 
   if (!open) return null;
 
   async function handleLogin(e: FormEvent) {
     e.preventDefault();
-    setError("");
     setLoading(true);
     try {
       const res = await fetch("/api/auth/login", {
@@ -41,8 +42,15 @@ export default function AuthModal({
         body: JSON.stringify({ email: loginEmail, password: loginPassword }),
       });
       const data = await res.json();
-      if (data.success && data.user) onSuccess(data.user);
-      else setError(data.error || "Login failed");
+      if (data.needsOtp && data.email) {
+        toast.success("Verification code sent");
+        setOtpEmail(data.email);
+      } else if (data.success && data.user) {
+        toast.success("Logged in");
+        onSuccess(data.user);
+      } else {
+        toast.error(data.error || "Login failed");
+      }
     } finally {
       setLoading(false);
     }
@@ -50,7 +58,6 @@ export default function AuthModal({
 
   async function handleSignup(e: FormEvent) {
     e.preventDefault();
-    setError("");
     setLoading(true);
     try {
       const res = await fetch("/api/auth/signup", {
@@ -59,8 +66,12 @@ export default function AuthModal({
         body: JSON.stringify({ name: signupName, email: signupEmail, password: signupPassword }),
       });
       const data = await res.json();
-      if (data.success && data.user) onSuccess(data.user);
-      else setError(data.error || "Sign up failed");
+      if (data.success && data.user) {
+        toast.success("Account created. You're logged in.");
+        onSuccess(data.user);
+      } else {
+        toast.error(data.error || "Sign up failed");
+      }
     } finally {
       setLoading(false);
     }
@@ -74,50 +85,55 @@ export default function AuthModal({
             ×
           </button>
         ) : null}
-        <h2>{title}</h2>
-        <p className="auth-modal-msg">{message}</p>
-        <div className="account-tabs">
-          <button type="button" className={tab === "login" ? "active" : ""} onClick={() => { setTab("login"); setError(""); }}>
-            Log in
-          </button>
-          <button type="button" className={tab === "signup" ? "active" : ""} onClick={() => { setTab("signup"); setError(""); }}>
-            Sign up
-          </button>
-        </div>
-        {tab === "login" ? (
-          <form onSubmit={handleLogin}>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="you@example.com" required />
-            </div>
-            <div className="form-group">
-              <label>Password</label>
-              <input type="password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} placeholder="Your password" required />
-            </div>
-            <button className="btn btn-accent" style={{ width: "100%" }} type="submit" disabled={loading}>
-              {loading ? "Please wait…" : "Log in"}
-            </button>
-          </form>
+        <h2>{otpEmail ? "Verify email" : title}</h2>
+        <p className="auth-modal-msg">{otpEmail ? "We sent a 6-digit code to your email." : message}</p>
+        {otpEmail ? (
+          <OtpStep email={otpEmail} purpose="login" onVerified={onSuccess} onBack={() => setOtpEmail(null)} />
         ) : (
-          <form onSubmit={handleSignup}>
-            <div className="form-group">
-              <label>Full name</label>
-              <input type="text" value={signupName} onChange={(e) => setSignupName(e.target.value)} placeholder="Your name" required />
+          <>
+            <div className="account-tabs">
+              <button type="button" className={tab === "login" ? "active" : ""} onClick={() => setTab("login")}>
+                Log in
+              </button>
+              <button type="button" className={tab === "signup" ? "active" : ""} onClick={() => setTab("signup")}>
+                Sign up
+              </button>
             </div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" value={signupEmail} onChange={(e) => setSignupEmail(e.target.value)} placeholder="you@example.com" required />
-            </div>
-            <div className="form-group">
-              <label>Password</label>
-              <input type="password" value={signupPassword} onChange={(e) => setSignupPassword(e.target.value)} placeholder="At least 6 characters" required minLength={6} />
-            </div>
-            <button className="btn btn-accent" style={{ width: "100%" }} type="submit" disabled={loading}>
-              {loading ? "Please wait…" : "Create account"}
-            </button>
-          </form>
+            {tab === "login" ? (
+              <form onSubmit={handleLogin}>
+                <div className="form-group">
+                  <label>Email</label>
+                  <input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="you@example.com" required />
+                </div>
+                <div className="form-group">
+                  <label>Password</label>
+                  <input type="password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} placeholder="Your password" required />
+                </div>
+                <button className="btn btn-accent" style={{ width: "100%" }} type="submit" disabled={loading}>
+                  {loading ? "Please wait…" : "Log in"}
+                </button>
+              </form>
+            ) : (
+              <form onSubmit={handleSignup}>
+                <div className="form-group">
+                  <label>Full name</label>
+                  <input type="text" value={signupName} onChange={(e) => setSignupName(e.target.value)} placeholder="Your name" required />
+                </div>
+                <div className="form-group">
+                  <label>Email</label>
+                  <input type="email" value={signupEmail} onChange={(e) => setSignupEmail(e.target.value)} placeholder="you@example.com" required />
+                </div>
+                <div className="form-group">
+                  <label>Password</label>
+                  <input type="password" value={signupPassword} onChange={(e) => setSignupPassword(e.target.value)} placeholder="At least 6 characters" required minLength={6} />
+                </div>
+                <button className="btn btn-accent" style={{ width: "100%" }} type="submit" disabled={loading}>
+                  {loading ? "Please wait…" : "Create account"}
+                </button>
+              </form>
+            )}
+          </>
         )}
-        {error ? <p className="auth-modal-error">{error}</p> : null}
       </div>
     </div>
   );

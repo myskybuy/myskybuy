@@ -2,36 +2,36 @@
   {
     "id": 1,
     "name": "Bags & Everyday Carry",
-    "image": "https://myskybuy.in/wp-content/uploads/2026/07/Moko-Tracker_LP.jpg"
+    "image": "/images/categories/bags-everyday-carry.jpg"
   },
   {
     "id": 2,
     "name": "Travel & Luggage",
-    "image": "https://myskybuy.in/wp-content/uploads/2026/07/The-Overnighter-Luggage_2.0_SLB-1_9f905c8f-723f-4a4e-ba4b-268f0f3927c8.jpg"
+    "image": "/images/categories/travel-luggage.jpg"
   },
   {
     "id": 3,
     "name": "Handbags & Totes",
-    "image": "https://myskybuy.in/wp-content/uploads/2026/07/The-Jazz-Tote_CN_1.jpg"
+    "image": "/images/categories/handbags-totes.jpg"
   },
   {
     "id": 4,
     "name": "Backpacks",
-    "image": "https://myskybuy.in/wp-content/uploads/2026/07/RightSide_bfb9ecd2-deff-48cb-9ea6-ceacc335c6ee-scaled.png"
+    "image": "/images/categories/backpacks.jpg"
   },
   {
     "id": 5,
     "name": "Slings & Crossbody",
-    "image": "https://myskybuy.in/wp-content/uploads/2026/07/1_430bf919-27b8-4ce7-91d6-39242c63ad75.png"
+    "image": "/images/categories/slings-crossbody.jpg"
   },
   {
     "id": 6,
     "name": "Laptop & Work Bags",
-    "image": "https://myskybuy.in/wp-content/uploads/2026/07/kairo45degree_07ec3a27-f990-480f-8c05-a74365e5ddfa.jpg"
+    "image": "/images/categories/laptop-work-bags.jpg"
   },
   {
     "id": 7,
     "name": "Wallets & Purses",
-    "image": "https://myskybuy.in/wp-content/uploads/2026/07/WQGI1763042M4_1_337baa55-8c02-4d37-89ca-25f1582f702d.jpg"
+    "image": "/images/categories/wallets-purses.jpg"
   }
 ]

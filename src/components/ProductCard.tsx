@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
+import SafeImage from "@/components/SafeImage";
 import { useCart } from "./CartProvider";
 
 export type Product = {
@@ -36,6 +38,7 @@ export default function ProductCard({ product }: { product: Product }) {
       salePrice: product.salePrice,
     });
     setFeedback("added");
+    toast.success("Item added to cart");
   }
 
   const btnLabel =
@@ -45,7 +48,7 @@ export default function ProductCard({ product }: { product: Product }) {
     <div className="product-card">
       <Link href={`/product/${product.id}`} className="thumb">
         {discount > 0 ? <span className="badge-sale">{discount}% OFF</span> : null}
-        <img src={product.image} alt={product.name} />
+        <SafeImage src={product.image} alt={product.name} />
       </Link>
       <div className="info">
         <span className="brand">{product.brand}</span>

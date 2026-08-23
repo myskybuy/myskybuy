@@ -6,7 +6,7 @@
     "brand": "Mokobara",
     "price": 4999,
     "salePrice": 2499,
-    "image": "https://mokobara.com/cdn/shop/files/Moko-mini-Black-2_73e8cd5f-306a-4531-8d84-aebc52e102c7.jpg?format=webp&quality=80&v=1776245093&width=800",
+    "image": "/images/products/1.jpg",
     "stock": 999,
     "description": "Moko Tracker is a travel accessories item from Mokobara, selected for Myskybuy's bags & everyday carry catalogue. It is selected for practical everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -17,7 +17,7 @@
     "brand": "Mokobara",
     "price": 4999,
     "salePrice": 2799,
-    "image": "https://mokobara.com/cdn/shop/files/Moko-mini-Yellow-1_09cc7573-8a7d-4bcc-ac13-c084977532a4.jpg?v=1772439271&width=2048",
+    "image": "/images/products/2.jpg",
     "stock": 999,
     "description": "Moko Mini is a travel accessories item from Mokobara, selected for Myskybuy's bags & everyday carry catalogue. It is selected for practical everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -28,7 +28,7 @@
     "brand": "Mokobara",
     "price": 18999,
     "salePrice": 11999,
-    "image": "https://mokobara.com/cdn/shop/files/The-Cabin-Overnighter-Luggage-Seaweed-Green_13c51add-2ff5-4cb2-b925-753090c6f9e2.jpg?format=webp&quality=80&v=1775810019&width=800",
+    "image": "/images/products/3.jpg",
     "stock": 999,
     "description": "Cabin Overnighter Luggage is a luggage item from Mokobara, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -39,7 +39,7 @@
     "brand": "Mokobara",
     "price": 2999,
     "salePrice": 1999,
-    "image": "https://mokobara.com/cdn/shop/files/The-Iconic-Luggage-Cover_Cabin-9_49833b18-59cf-4add-be46-0687a5613f0d.jpg?format=webp&quality=80&v=1769075429&width=800",
+    "image": "/images/products/4.jpg",
     "stock": 999,
     "description": "Iconic Luggage Cover is a luggage covers item from Mokobara, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -50,7 +50,7 @@
     "brand": "Mokobara",
     "price": 13999,
     "salePrice": 8499,
-    "image": "https://mokobara.com/cdn/shop/files/The-Astrid-Tote_MA-1_3a5d2020-1c75-4e45-ba50-342e39eeb374.jpg?v=1775562557&width=2048",
+    "image": "/images/products/5.jpg",
     "stock": 999,
     "description": "Jazz Tote is a totes & handbags item from Mokobara, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -61,7 +61,7 @@
     "brand": "Mokobara",
     "price": 12999,
     "salePrice": 6499,
-    "image": "https://mokobara.com/cdn/shop/files/Aisle-Cabin-Pro_Money-moves_1.jpg?v=1782539489",
+    "image": "/images/products/6.jpg",
     "stock": 999,
     "description": "Aisle Cabin Pro is a luggage item from Mokobara, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -72,7 +72,7 @@
     "brand": "Mokobara",
     "price": 8999,
     "salePrice": 4499,
-    "image": "https://mokobara.com/cdn/shop/files/The-Transit-Briefcase_2.0_Crypto-1.jpg?v=1745749418&width=2048",
+    "image": "/images/products/7.jpg",
     "stock": 999,
     "description": "Transit Briefcase (V1) is a briefcases & duffles item from Mokobara, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -83,7 +83,7 @@
     "brand": "Mokobara",
     "price": 11999,
     "salePrice": 6999,
-    "image": "https://mokobara.com/cdn/shop/files/The-Teppanyaki-Briefcase_Tofu-1.jpg?format=webp&quality=80&v=1774256487&width=800",
+    "image": "/images/products/8.jpg",
     "stock": 999,
     "description": "Teppanyaki Briefcase is a briefcases & duffles item from Mokobara, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -94,7 +94,7 @@
     "brand": "Mokobara",
     "price": 14999,
     "salePrice": 8299,
-    "image": "https://mokobara.com/cdn/shop/files/The_Overnighter_Backpack_-_Headspace.webp?quality=80&v=1775643728&width=1440",
+    "image": "/images/products/9.jpg",
     "stock": 999,
     "description": "Overnighter Backpack - 23L (V1) is a backpacks item from Mokobara, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -105,7 +105,7 @@
     "brand": "Mokobara",
     "price": 5499,
     "salePrice": 4499,
-    "image": "https://mokobara.com/cdn/shop/files/The-Halo-Handbag_2.0_SL-1_74d5f3e1-7072-438c-82c4-d5166d9ab14d.jpg?v=1773599848&width=2000",
+    "image": "/images/products/10.jpg",
     "stock": 999,
     "description": "Halo Handbag is a totes & handbags item from Mokobara, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -116,7 +116,7 @@
     "brand": "uppercase",
     "price": 9000,
     "salePrice": 9000,
-    "image": "https://m.media-amazon.com/images/I/31stGq%2BvfXL._SL500_.jpg",
+    "image": "/images/products/11.jpg",
     "stock": 999,
     "description": "Ace Cabin Hard Luggage Trolley Bag Beige is a eco backpack item from uppercase, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -127,7 +127,7 @@
     "brand": "uppercase",
     "price": 9000,
     "salePrice": 9000,
-    "image": "https://mokobara.ae/cdn/shop/files/The-Cabin-Pro_SG-3_77905efe-7cf7-44ef-a75b-452c295b4b6d.webp?v=1773223246&width=2000",
+    "image": "/images/products/12.jpg",
     "stock": 999,
     "description": "Ace Cabin Hard Luggage Trolley Bag Green is a eco backpack item from uppercase, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -138,7 +138,7 @@
     "brand": "uppercase",
     "price": 4750,
     "salePrice": 3799,
-    "image": "https://mokobara.com/cdn/shop/files/The_Overnighter_Backpack_-_Headspace.webp?quality=80&v=1775643728&width=1440",
+    "image": "/images/products/13.jpg",
     "stock": 999,
     "description": "NomadX 48 Travel Backpack Black is a eco backpack item from uppercase, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -149,7 +149,7 @@
     "brand": "uppercase",
     "price": 4750,
     "salePrice": 3799,
-    "image": "https://hidesign.com/cdn/shop/files/8903439903657_1_1100x.jpg?v=1763035530",
+    "image": "/images/products/14.jpg",
     "stock": 999,
     "description": "NomadX 48 Travel Backpack Olive is a eco backpack item from uppercase, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -160,7 +160,7 @@
     "brand": "uppercase",
     "price": 2250,
     "salePrice": 1800,
-    "image": "https://hidesign.com/cdn/shop/files/8903439903657_1_1100x.jpg?v=1763035530",
+    "image": "/images/products/15.jpg",
     "stock": 999,
     "description": "Revo Laptop Backpack Olive is a eco backpack item from uppercase, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -171,7 +171,7 @@
     "brand": "uppercase",
     "price": 2250,
     "salePrice": 1800,
-    "image": "https://hidesign.com/cdn/shop/files/8903439907198.jpg?v=1780661324",
+    "image": "/images/products/16.jpg",
     "stock": 999,
     "description": "Revo Laptop Backpack Blue is a eco backpack item from uppercase, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -182,7 +182,7 @@
     "brand": "uppercase",
     "price": 1285,
     "salePrice": 899,
-    "image": "https://mokobara.com/cdn/shop/products/MokoMini_Shopify-SG-01_651eadac-018d-4b1f-aab2-c658d1bfbe87.webp?quality=80&v=1776245617&width=800",
+    "image": "/images/products/17.jpg",
     "stock": 999,
     "description": "Cubo Sling Bag Green is a sling bags item from uppercase, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -193,7 +193,7 @@
     "brand": "uppercase",
     "price": 1285,
     "salePrice": 899,
-    "image": "https://www.capresebags.com/cdn/shop/files/2_f44bb067-0401-4db2-b210-d5537125fd81_1080x.jpg?v=1781243545",
+    "image": "/images/products/18.jpg",
     "stock": 999,
     "description": "Cubo Sling Bag Beige is a sling bags item from uppercase, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -204,7 +204,7 @@
     "brand": "uppercase",
     "price": 1500,
     "salePrice": 1199,
-    "image": "https://mokobara.com/cdn/shop/files/Moko-mini-Yellow-2_e894e063-5999-46eb-8ba0-340875fab993.jpg?v=1709286873&width=1600",
+    "image": "/images/products/19.jpg",
     "stock": 999,
     "description": "Flux Sling Bag Green is a sling bags item from uppercase, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -215,7 +215,7 @@
     "brand": "uppercase",
     "price": 1500,
     "salePrice": 1199,
-    "image": "https://www.buyhautesauce.com/cdn/shop/files/HSSB3009_8_95aa6cab-3f38-461d-bdfb-003da8e20a34.jpg?v=1743429914&width=600",
+    "image": "/images/products/20.jpg",
     "stock": 999,
     "description": "Flux Sling Bag Beige is a sling bags item from uppercase, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -226,7 +226,7 @@
     "brand": "Zouk",
     "price": 1999,
     "salePrice": 1529,
-    "image": "https://cdn.shopify.com/s/files/1/2186/5207/products/RoyalIndianPeacockMotif_e2d51749-bd6c-47a8-b3f2-0c9ddd967406.jpg?v=1681722278",
+    "image": "/images/products/21.jpg",
     "stock": 999,
     "description": "Royal Indian Peacock Motif Office Tote Bag is a office tote bag item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -237,7 +237,7 @@
     "brand": "Zouk",
     "price": 1799,
     "salePrice": 1039,
-    "image": "https://artrystindia.com/cdn/shop/files/NM6_1788_resize-min.jpg?v=1715664162&width=1445",
+    "image": "/images/products/22.jpg",
     "stock": 999,
     "description": "Saisha Sling Bag - Pithora Artistry is a saisha sling bag item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -248,7 +248,7 @@
     "brand": "Zouk",
     "price": 1799,
     "salePrice": 1039,
-    "image": "https://cdn.shopify.com/s/files/1/2186/5207/files/MulticolorMandalaPrintSlingBag_1.jpg?v=1684250802",
+    "image": "/images/products/23.jpg",
     "stock": 999,
     "description": "Saisha Sling Bag - Multicolor Mandala Print is a saisha sling bag item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -259,7 +259,7 @@
     "brand": "Zouk",
     "price": 1999,
     "salePrice": 1299,
-    "image": "https://zouk.co.in/cdn/shop/files/WavBeach_Luna_Handbag_2.jpg?v=1761886678&width=2048",
+    "image": "/images/products/24.jpg",
     "stock": 999,
     "description": "FloLov Office Tote Bag is a office tote bag item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -270,7 +270,7 @@
     "brand": "Zouk",
     "price": 1799,
     "salePrice": 1039,
-    "image": "https://artrystindia.com/cdn/shop/files/NM6_1788_resize-min.jpg?v=1715664162&width=1445",
+    "image": "/images/products/25.jpg",
     "stock": 999,
     "description": "Saisha Sling Bag - Bhuj Rabari is a saisha sling bag item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -281,7 +281,7 @@
     "brand": "Zouk",
     "price": 1999,
     "salePrice": 1529,
-    "image": "https://zouk.co.in/cdn/shop/files/WavBeach_Luna_Handbag_2.jpg?v=1761886678&width=2048",
+    "image": "/images/products/26.jpg",
     "stock": 999,
     "description": "WavBeach Office Tote Bag is a office tote bag item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -292,7 +292,7 @@
     "brand": "Zouk",
     "price": 1799,
     "salePrice": 1039,
-    "image": "https://www.capresebags.com/cdn/shop/files/SGPIEMDPCH_2.webp?v=1715250614",
+    "image": "/images/products/27.jpg",
     "stock": 999,
     "description": "Saisha Sling Bag - Cashmere Noir (Pink) is a saisha sling bag item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -303,7 +303,7 @@
     "brand": "Zouk",
     "price": 2349,
     "salePrice": 2349,
-    "image": "https://zouk.co.in/cdn/shop/products/Latticelace1500x1500Diagonalcopy12.jpg?v=1677601040",
+    "image": "/images/products/28.jpg",
     "stock": 999,
     "description": "Lattice Lace & Kovil Blue - Women's Office Bag & Flap Sling Bag Combo is a women's office bag & flap sling bag combo item from Zouk, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -314,7 +314,7 @@
     "brand": "Zouk",
     "price": 2599,
     "salePrice": 2599,
-    "image": "https://assets.myntassets.com/assets/images/29816304/2025/4/24/c801faee-4671-4f46-864c-cbd49627e4051745493586428-ZOUK-Royal-Indian-Peacock-Motif-Harmony-Printed-Structured-S-1.jpg",
+    "image": "/images/products/29.jpg",
     "stock": 999,
     "description": "Zoe Sling Bag Royal Indian Peacock Motif & Nadia Sling Bag Triund Baroque Combo is a zoe sling & nadia sling combo item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -325,7 +325,7 @@
     "brand": "Zouk",
     "price": 2349,
     "salePrice": 2349,
-    "image": "https://zouk.co.in/cdn/shop/files/WavBeach_Luna_Handbag_2.jpg?v=1761886678&width=2048",
+    "image": "/images/products/30.jpg",
     "stock": 999,
     "description": "Wavbeach Women's Office Bag & Harmony Sling Bag Combo is a wob & harmony sling bag combo item from Zouk, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -336,7 +336,7 @@
     "brand": "Zouk",
     "price": 2349,
     "salePrice": 2349,
-    "image": "https://cdn.shopify.com/s/files/1/2186/5207/products/RoyalIndianPeacockMotif_e2d51749-bd6c-47a8-b3f2-0c9ddd967406.jpg?v=1681722278",
+    "image": "/images/products/31.jpg",
     "stock": 999,
     "description": "FloMotif Saisha Sling Bag & Nadia Sling Bag Combo is a saisha sling & nadia sling bag combo item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -347,7 +347,7 @@
     "brand": "Zouk",
     "price": 2699,
     "salePrice": 2699,
-    "image": "https://cdn.shopify.com/s/files/1/2186/5207/products/RoyalIndianPeacockMotif_e2d51749-bd6c-47a8-b3f2-0c9ddd967406.jpg?v=1681722278",
+    "image": "/images/products/32.jpg",
     "stock": 999,
     "description": "FloMotif Saisha Sling Bag & Statement Business Bag Combo is a statement business bag & saisha sling bag combo item from Zouk, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -358,7 +358,7 @@
     "brand": "Assembly",
     "price": 3999,
     "salePrice": 2999,
-    "image": "https://assemblytravel.com/cdn/shop/files/1_b9a8780b-ec72-4936-af3b-c2e2f8ccc7cf.png?v=1753886151&width=600",
+    "image": "/images/products/33.jpg",
     "stock": 999,
     "description": "Kairo Laptop Messenger Bag Green is a laptop messenger item from Assembly, selected for Myskybuy's laptop & work bags catalogue. It is suited for meetings, devices and workday organization. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -369,7 +369,7 @@
     "brand": "Assembly",
     "price": 3999,
     "salePrice": 2999,
-    "image": "https://assemblytravel.com/cdn/shop/files/1_b9a8780b-ec72-4936-af3b-c2e2f8ccc7cf.png?v=1753886151&width=600",
+    "image": "/images/products/34.jpg",
     "stock": 999,
     "description": "Kairo Laptop Messenger Bag Beige is a laptop messenger item from Assembly, selected for Myskybuy's laptop & work bags catalogue. It is suited for meetings, devices and workday organization. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -380,7 +380,7 @@
     "brand": "Assembly",
     "price": 3999,
     "salePrice": 2999,
-    "image": "https://uppercase.co.in/cdn/shop/files/14_7.png?v=1757257970&width=1066",
+    "image": "/images/products/35.jpg",
     "stock": 999,
     "description": "Kairo Laptop Messenger Bag Blue is a laptop messenger item from Assembly, selected for Myskybuy's laptop & work bags catalogue. It is suited for meetings, devices and workday organization. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -391,7 +391,7 @@
     "brand": "Assembly",
     "price": 3999,
     "salePrice": 2999,
-    "image": "https://www.fabulive.com/cdn/shop/files/4c06549fe11d41148a0c5a2d1eea65dc-goods.jpg?v=1748545094",
+    "image": "/images/products/36.jpg",
     "stock": 999,
     "description": "Kairo Laptop Messenger Bag Black is a laptop messenger item from Assembly, selected for Myskybuy's laptop & work bags catalogue. It is suited for meetings, devices and workday organization. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -402,7 +402,7 @@
     "brand": "Assembly",
     "price": 22499,
     "salePrice": 12999,
-    "image": "https://assemblytravel.com/cdn/shop/files/SETOF3.jpg?v=1706870261&width=800",
+    "image": "/images/products/37.jpg",
     "stock": 999,
     "description": "Stark Combo | Moon-White | Set of 3 Luggage is a set of 3, cabin + check in hard luggage item from Assembly, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -413,7 +413,7 @@
     "brand": "Assembly",
     "price": 13799,
     "salePrice": 7999,
-    "image": "https://assemblytravel.com/cdn/shop/files/SETOF3.jpg?v=1706870261&width=800",
+    "image": "/images/products/38.jpg",
     "stock": 999,
     "description": "Stark Combo | Moon-White | Cabin+Medium Hard Luggage is a set of 2, cabin + check in hard luggage item from Assembly, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -424,7 +424,7 @@
     "brand": "Assembly",
     "price": 8699,
     "salePrice": 5999,
-    "image": "https://img.tatacliq.com/images/i28/437Wx649H/MP000000028300417_437Wx649H_202510281605011.jpeg",
+    "image": "/images/products/39.jpg",
     "stock": 999,
     "description": "Stark | Moon-White | Large Hard Luggage is a check in hard luggage item from Assembly, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -435,7 +435,7 @@
     "brand": "Assembly",
     "price": 7499,
     "salePrice": 4999,
-    "image": "https://assets.myntassets.com/assets/images/2026/MAY/9/hcYpw9vv_2edc45b19fff45caa79dab88e220c3b0.jpg",
+    "image": "/images/products/40.jpg",
     "stock": 999,
     "description": "Stark | Moon-White | Medium Hard Luggage is a check in hard luggage item from Assembly, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -446,7 +446,7 @@
     "brand": "Assembly",
     "price": 6249,
     "salePrice": 3999,
-    "image": "https://assemblytravel.com/cdn/shop/files/Starkmoonwhite20.jpg?v=1778844690&width=1080",
+    "image": "/images/products/41.jpg",
     "stock": 999,
     "description": "Stark | Moon-White | Cabin Hard Luggage is a cabin hard luggage item from Assembly, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -457,7 +457,7 @@
     "brand": "Lavie",
     "price": 1999,
     "salePrice": 999,
-    "image": "https://www.flipy.pk/cdn/shop/files/sefwefd_c5387189-484d-4d98-8ca4-2482e4626deb.jpg?v=1724675708&width=1946",
+    "image": "/images/products/42.jpg",
     "stock": 999,
     "description": "Safain24 Large Bifold Wallet is a wallet item from Lavie, selected for Myskybuy's wallets & purses catalogue. It is made for cards, cash and compact essentials. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -468,7 +468,7 @@
     "brand": "Lavie",
     "price": 2990,
     "salePrice": 599,
-    "image": "https://www.lavieworld.com/cdn/shop/files/jarvis-large-blue-backpack.jpg",
+    "image": "/images/products/43.jpg",
     "stock": 999,
     "description": "Lavie Sport Jarvis 28 Ltrs Laptop Backpack | School College Bag For Boys & Girls Blue is a laptop backpacks item from Lavie, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -479,7 +479,7 @@
     "brand": "Lavie",
     "price": 3299,
     "salePrice": 1649,
-    "image": "https://images-static.nykaa.com/media/catalog/product/9/f/9f79252STLAVIE00005259_1.jpg?tr=w-500",
+    "image": "/images/products/44.jpg",
     "stock": 999,
     "description": "Reno Colourblock Small Sling Bag is a sling bags item from Lavie, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -490,7 +490,7 @@
     "brand": "Lavie",
     "price": 4299,
     "salePrice": 3009,
-    "image": "https://www.lavieworld.com/cdn/shop/files/HRGV2243042M4_4.jpg?v=1756723986&width=1080",
+    "image": "/images/products/45.jpg",
     "stock": 999,
     "description": "Duo Rumba Medium Handbag is a handbag item from Lavie, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -501,7 +501,7 @@
     "brand": "Lavie",
     "price": 4299,
     "salePrice": 3009,
-    "image": "https://www.lavieworld.com/cdn/shop/files/HRGV2243042M4_4.jpg?v=1756723986&width=1080",
+    "image": "/images/products/46.jpg",
     "stock": 999,
     "description": "Duo Rumba Medium Handbag is a handbag item from Lavie, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -512,7 +512,7 @@
     "brand": "Lavie",
     "price": 3499,
     "salePrice": 1749,
-    "image": "https://www.lavieworld.com/cdn/shop/files/STGI3254430M4_1_c4ed4862-8428-4d50-bde3-1e9255c02c35.jpg?v=1782191032&width=1080",
+    "image": "/images/products/47.jpg",
     "stock": 999,
     "description": "Mono Augusta Medium Sling Bag is a sling bags item from Lavie, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -523,7 +523,7 @@
     "brand": "Lavie",
     "price": 3499,
     "salePrice": 2799,
-    "image": "https://www.bagpoint.in/cdn/shop/files/302_da478878-fe05-4f3d-872e-8094e8b996e8.webp?v=1776944157&width=3840",
+    "image": "/images/products/48.jpg",
     "stock": 999,
     "description": "Zenia Laptop Backpack is a backpack item from Lavie, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -534,7 +534,7 @@
     "brand": "Lavie",
     "price": 4599,
     "salePrice": 2299,
-    "image": "https://www.lavieworld.com/cdn/shop/files/HQGE1702019N4_1.jpg?v=1759085261",
+    "image": "/images/products/49.jpg",
     "stock": 999,
     "description": "Houston Large Tote Bag is a , free-dom item from Lavie, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -545,7 +545,7 @@
     "brand": "Lavie",
     "price": 2990,
     "salePrice": 1495,
-    "image": "https://assets.myntassets.com/assets/images/2025/FEBRUARY/26/nQPeb7kW_4ca16977f6744b6dbed577442cc2c164.jpg",
+    "image": "/images/products/50.jpg",
     "stock": 999,
     "description": "Lavie Sport Titan 29L Laptop Backpack with Rain cover For Men & Women | Boys & Girls Black is a laptop backpacks item from Lavie, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -556,7 +556,7 @@
     "brand": "Lavie",
     "price": 5499,
     "salePrice": 2749,
-    "image": "https://lacremestjacobs.com/cdn/shop/files/51696d01Screenshot_202026-04-15_20at_201.36.19_E2_80_AFPM.png?v=1776275018&width=1200",
+    "image": "/images/products/51.jpg",
     "stock": 999,
     "description": "Toronto 3C Hobo 'S Ladies Handbag is a hobo bag item from Lavie, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -567,7 +567,7 @@
     "brand": "Caprese",
     "price": 3799,
     "salePrice": 2279,
-    "image": "https://www.capresebags.com/cdn/shop/files/2_f44bb067-0401-4db2-b210-d5537125fd81_1080x.jpg?v=1781243545",
+    "image": "/images/products/52.jpg",
     "stock": 999,
     "description": "Caprese X Emily in Paris Tiara Small Tan Satchel Bag is a satchel bags for women item from Caprese, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -578,7 +578,7 @@
     "brand": "Caprese",
     "price": 3799,
     "salePrice": 2279,
-    "image": "https://www.capresebags.com/cdn/shop/files/SGPIEMDPCH_2.webp?v=1715250614",
+    "image": "/images/products/53.jpg",
     "stock": 999,
     "description": "Caprese X Emily in Paris Tiara Small Blush Satchel Bag is a satchel bags for women item from Caprese, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -589,7 +589,7 @@
     "brand": "Caprese",
     "price": 3799,
     "salePrice": 2279,
-    "image": "https://www.capresebags.com/cdn/shop/files/11_5d1d6af1-0e69-4743-9c36-1e51a6ca7f7b_1080x.jpg?v=1781243331",
+    "image": "/images/products/54.jpg",
     "stock": 999,
     "description": "Caprese X Emily in Paris Tiara Small Black Satchel Bag is a satchel bags for women item from Caprese, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -600,7 +600,7 @@
     "brand": "Caprese",
     "price": 3299,
     "salePrice": 1979,
-    "image": "https://www.capresebags.com/cdn/shop/files/SGPIEMDPCH_2.webp?v=1715250614",
+    "image": "/images/products/55.jpg",
     "stock": 999,
     "description": "Caprese X Emily in Paris Tiara Medium Blush Sling Bag is a sling bags for women item from Caprese, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -611,7 +611,7 @@
     "brand": "Caprese",
     "price": 3299,
     "salePrice": 1979,
-    "image": "https://www.capresebags.com/cdn/shop/files/5_1994d7d7-b9d9-4a24-9d29-ac5d11b56560_1080x.jpg?v=1780298630",
+    "image": "/images/products/56.jpg",
     "stock": 999,
     "description": "Caprese X Emily in Paris Tiara Medium Black Sling Bag is a sling bags for women item from Caprese, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -622,7 +622,7 @@
     "brand": "Caprese",
     "price": 4299,
     "salePrice": 2579,
-    "image": "https://cdn.shopify.com/s/files/1/0558/3087/2250/files/1_14986821-9d4a-45d5-835a-c24fb05d6a50_435x.webp?v=1775752341%3Fv%3D1706687931&width=750",
+    "image": "/images/products/57.jpg",
     "stock": 999,
     "description": "Caprese X Emily in Paris Tiara Medium Tan Fashion Backpack is a backpacks for women item from Caprese, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -633,7 +633,7 @@
     "brand": "Caprese",
     "price": 4299,
     "salePrice": 2579,
-    "image": "https://cdn.shopify.com/s/files/1/0558/3087/2250/files/1_14986821-9d4a-45d5-835a-c24fb05d6a50_435x.webp?v=1775752341%3Fv%3D1706687931&width=750",
+    "image": "/images/products/58.jpg",
     "stock": 999,
     "description": "Caprese X Emily in Paris Tiara Medium Blush Fashion Backpack is a backpacks for women item from Caprese, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -644,7 +644,7 @@
     "brand": "Caprese",
     "price": 4299,
     "salePrice": 2579,
-    "image": "https://www.capresebags.com/cdn/shop/files/1_5fcacd55-7262-4788-b57a-230a43f212bc.webp?v=1775752408",
+    "image": "/images/products/59.jpg",
     "stock": 999,
     "description": "Caprese X Emily in Paris Tiara Medium Black Fashion Backpack is a backpacks for women item from Caprese, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -655,7 +655,7 @@
     "brand": "Caprese",
     "price": 3799,
     "salePrice": 2279,
-    "image": "https://img.tatacliq.com/images/i29/450Wx545H/MP000000029622761_450Wx545H_202512261408151.jpeg",
+    "image": "/images/products/60.jpg",
     "stock": 999,
     "description": "Caprese Ana Medium Tan Baguette Bag is a baguette bags for women item from Caprese, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -666,7 +666,7 @@
     "brand": "Caprese",
     "price": 3799,
     "salePrice": 2279,
-    "image": "https://img.tatacliq.com/images/i29/1348Wx2000H/MP000000029622849_1348Wx2000H_202512261410471.jpeg",
+    "image": "/images/products/61.jpg",
     "stock": 999,
     "description": "Caprese Ana Medium Red Baguette Bag is a baguette bags for women item from Caprese, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -677,7 +677,7 @@
     "brand": "The Clownfish",
     "price": 4480,
     "salePrice": 4480,
-    "image": "https://www.theclownfish.com/cdn/shop/files/1743999456242_Artboard_201.jpg?v=1744364724&width=1445",
+    "image": "/images/products/62.jpg",
     "stock": 999,
     "description": "THE CLOWNFISH Combo: Unisex Chocolate Brown Sling Bags | 8L | Water Resistant is a messenger & sling bags item from The Clownfish, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -688,7 +688,7 @@
     "brand": "The Clownfish",
     "price": 2599,
     "salePrice": 2599,
-    "image": "https://images-static.nykaa.com/media/catalog/product/4/6/465b96e1000000131638_4.jpg?tr=w-500",
+    "image": "/images/products/63.jpg",
     "stock": 999,
     "description": "THE CLOWNFISH Single Shoulder Unisex Black Sling Bag | 10.6 inch Tablet is a accessories & peripherals item from The Clownfish, selected for Myskybuy's slings & crossbody catalogue. It is suited for light, hands-free everyday carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -699,7 +699,7 @@
     "brand": "The Clownfish",
     "price": 3999,
     "salePrice": 1149,
-    "image": "https://shop.globalbees.com/cdn/shop/files/1735024401837_White_20Background1_jpg.jpg?v=1740768134",
+    "image": "/images/products/64.jpg",
     "stock": 999,
     "description": "Allure Series Tote Bag: Stylish Green Jute & Vegan Leather | 13L | Floral Pattern is a totes item from The Clownfish, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -710,7 +710,7 @@
     "brand": "The Clownfish",
     "price": 14799,
     "salePrice": 5440,
-    "image": "https://m.media-amazon.com/images/I/51GatHc-mhL._SL500_.jpg",
+    "image": "/images/products/65.jpg",
     "stock": 999,
     "description": "Luxury Series 18Inch Combo: Unisex Wine Cabin Trolley Bag | 45L is a suitcases & trolley bags item from The Clownfish, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -721,7 +721,7 @@
     "brand": "The Clownfish",
     "price": 16399,
     "salePrice": 5710,
-    "image": "https://images-static.nykaa.com/media/catalog/product/8/d/8d408f22000000262334_2.jpg",
+    "image": "/images/products/66.jpg",
     "stock": 999,
     "description": "Titan Series 20 Inch Suitcase - TSA Lock, Durable Design | Pure Black is a suitcases & trolley bags item from The Clownfish, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -732,7 +732,7 @@
     "brand": "The Clownfish",
     "price": 14799,
     "salePrice": 5222,
-    "image": "https://thebetterhome.com/cdn/shop/files/1755076911075_White_20Background.jpg?v=1755199388",
+    "image": "/images/products/67.jpg",
     "stock": 999,
     "description": "Luxury Series 18-Inch Cabin Trolley Bag - Faux Leather | 45L | Olive is a suitcases & trolley bags item from The Clownfish, selected for Myskybuy's travel & luggage catalogue. It is built for airport runs, weekend movement and organized packing. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -743,7 +743,7 @@
     "brand": "The Clownfish",
     "price": 6498,
     "salePrice": 6498,
-    "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/9/8/985897c60207239764_1.jpg?rnd=20200526195200&tr=w-512",
+    "image": "/images/products/68.jpg",
     "stock": 999,
     "description": "Combo: Denim Blue Sling & Handbag Set for Women | Stylish & Durable | Lightweight is a sling & cross-body bags item from The Clownfish, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -754,7 +754,7 @@
     "brand": "The Clownfish",
     "price": 2499,
     "salePrice": 1016,
-    "image": "https://www.theclownfish.com/cdn/shop/files/1743999456242_Artboard_201.jpg?v=1744364724&width=1445",
+    "image": "/images/products/69.jpg",
     "stock": 999,
     "description": "Canyon 1 Pack: Unisex Grey Water Resistant Travel Laptop Bag | 35*48*7.5cm | 0.58kgs is a laptop bags item from The Clownfish, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -765,7 +765,7 @@
     "brand": "Hidesign",
     "price": 2895,
     "salePrice": 2026.5,
-    "image": "https://hidesign.com/cdn/shop/files/8903439880255_4_1024x1024.jpg?v=1737451994",
+    "image": "/images/products/70.jpg",
     "stock": 999,
     "description": "Hydor W3 Tan Leather Bi Fold Wallet is a mens wallet item from Hidesign, selected for Myskybuy's wallets & purses catalogue. It is made for cards, cash and compact essentials. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -776,7 +776,7 @@
     "brand": "Hidesign",
     "price": 10995,
     "salePrice": 6597,
-    "image": "https://hidesign.com/cdn/shop/products/carmel-01-womens-brown-regular-sling-bag_1.jpg?v=1742554523",
+    "image": "/images/products/71.jpg",
     "stock": 999,
     "description": "Electra 02 Brown Leather Sling Bag is a womens handbags item from Hidesign, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -787,7 +787,7 @@
     "brand": "Hidesign",
     "price": 9995,
     "salePrice": 6996.5,
-    "image": "https://hidesign.com/cdn/shop/products/carmel-01-womens-brown-regular-sling-bag_1.jpg?v=1742554523",
+    "image": "/images/products/72.jpg",
     "stock": 999,
     "description": "Electra 01 Brown Leather Sling Bag is a womens handbags item from Hidesign, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -798,7 +798,7 @@
     "brand": "Hidesign",
     "price": 14595,
     "salePrice": 10216.5,
-    "image": "https://hidesign.com/cdn/shop/files/OAXACA02-GOATGLAZEDMELBOURNERANCH-FORESTGREENBEAK-L_1.jpg?v=1758617899",
+    "image": "/images/products/73.jpg",
     "stock": 999,
     "description": "Hydor 02 Green Leather Tote Bag is a womens handbags item from Hidesign, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -809,7 +809,7 @@
     "brand": "Hidesign",
     "price": 11995,
     "salePrice": 7197,
-    "image": "https://hidesign.com/cdn/shop/files/8903439876319.jpg?v=1743761014",
+    "image": "/images/products/74.jpg",
     "stock": 999,
     "description": "Lunara 02 Blue Leather Shoulder Bag is a womens handbags item from Hidesign, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -820,7 +820,7 @@
     "brand": "Hidesign",
     "price": 15995,
     "salePrice": 11196.5,
-    "image": "https://hidesign.com/cdn/shop/files/8903439903657_1_1100x.jpg?v=1763035530",
+    "image": "/images/products/75.jpg",
     "stock": 999,
     "description": "Hydor 03 Green Leather Backpack is a mens bag item from Hidesign, selected for Myskybuy's backpacks catalogue. It is suited for office commutes, campus use and daily laptop carry. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -831,7 +831,7 @@
     "brand": "Hidesign",
     "price": 2495,
     "salePrice": 1746.5,
-    "image": "https://hidesign.com/cdn/shop/files/l107-n-mens-blue-bi-fold-wallet_3_1024x1024%402x.jpg?v=1763529624",
+    "image": "/images/products/76.jpg",
     "stock": 999,
     "description": "Hydor W2 Blue Leather Bi Fold Wallet is a mens wallet item from Hidesign, selected for Myskybuy's wallets & purses catalogue. It is made for cards, cash and compact essentials. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   },
@@ -842,7 +842,7 @@
     "brand": "Hidesign",
     "price": 10995,
     "salePrice": 6597,
-    "image": "https://hidesign.com/cdn/shop/files/8903439876319_2.jpg?v=1743761014",
+    "image": "/images/products/77.jpg",
     "stock": 999,
     "description": "Electra 02 Blue Leather Sling Bag is a womens handbags item from Hidesign, selected for Myskybuy's handbags & totes catalogue. It is selected for everyday styling, storage and city errands. The product name, current public price and imagery are matched from the brand/storefront source. Important: Capacity, material, colour, warranty and dispatch terms can change. Supplier availability is confirmed during fulfilment before dispatch."
   }

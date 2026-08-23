@@ -23,8 +23,19 @@ type OrderEmail = {
   paymentMethod: string;
 };
 
+function logEmailError(label: string, err: unknown) {
+  console.error(`[email] ${label}`, err);
+}
+
 export async function sendOrderConfirmationEmail(order: OrderEmail) {
-  if (!transporter || !order.email) return;
+  if (!order.email) {
+    console.warn("[email] order confirmation skipped: empty recipient");
+    return false;
+  }
+  if (!transporter) {
+    console.warn("[email] order confirmation skipped: EMAIL_ENABLED / credentials not set");
+    return false;
+  }
 
   const itemsHTML = order.items
     .map(
@@ -33,11 +44,12 @@ export async function sendOrderConfirmationEmail(order: OrderEmail) {
     )
     .join("");
 
-  await transporter.sendMail({
-    from: `"MySkyBuy" <${EMAIL_USER}>`,
-    to: order.email,
-    subject: `Order #${order.id} confirmed — MySkyBuy`,
-    html: `
+  try {
+    await transporter.sendMail({
+      from: `"MySkyBuy" <${EMAIL_USER}>`,
+      to: order.email,
+      subject: `Order #${order.id} confirmed — MySkyBuy`,
+      html: `
       <div style="font-family:Inter,Arial,sans-serif;max-width:560px;margin:0 auto;">
         <h2 style="color:#0d5c53;">Your order successfully completed ✅</h2>
         <p>Hi ${order.customerName}, thanks for shopping at MySkyBuy.</p>
@@ -46,16 +58,58 @@ export async function sendOrderConfirmationEmail(order: OrderEmail) {
         <p style="font-size:18px;font-weight:700;">Total: ₹${order.total}</p>
       </div>
     `,
-  });
+    });
+    return true;
+  } catch (err) {
+    logEmailError("order confirmation failed", err);
+    return false;
+  }
 }
 
 export async function sendWelcomeEmail(user: { name: string; email: string }) {
-  if (!transporter) return;
+  if (!transporter) {
+    console.warn("[email] welcome skipped: EMAIL_ENABLED / credentials not set");
+    return false;
+  }
+  try {
+    await transporter.sendMail({
+      from: `"MySkyBuy" <${EMAIL_USER}>`,
+      to: user.email,
+      subject: "Welcome to MySkyBuy",
+      html: `<p>Hi ${user.name}, your MySkyBuy account is ready. Happy shopping!</p>`,
+    });
+    return true;
+  } catch (err) {
+    logEmailError("welcome failed", err);
+    return false;
+  }
+}
 
-  await transporter.sendMail({
-    from: `"MySkyBuy" <${EMAIL_USER}>`,
-    to: user.email,
-    subject: "Welcome to MySkyBuy",
-    html: `<p>Hi ${user.name}, your MySkyBuy account is ready. Happy shopping!</p>`,
-  });
+export async function sendOtpEmail(email: string, code: string) {
+  if (process.env.NODE_ENV !== "production") {
+    console.log(`[MySkyBuy OTP] ${email}: ${code}`);
+  }
+  if (!transporter) {
+    console.warn("[email] OTP skipped: EMAIL_ENABLED / credentials not set");
+    return false;
+  }
+  try {
+    await transporter.sendMail({
+      from: `"MySkyBuy" <${EMAIL_USER}>`,
+      to: email,
+      subject: "Your MySkyBuy verification code",
+      html: `
+        <div style="font-family:Inter,Arial,sans-serif;max-width:480px;margin:0 auto;">
+          <h2 style="color:#0d5c53;">Verify your email</h2>
+          <p>Your MySkyBuy verification code is:</p>
+          <p style="font-size:28px;font-weight:800;letter-spacing:6px;">${code}</p>
+          <p>This code expires in 10 minutes.</p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (err) {
+    logEmailError("OTP failed", err);
+    return false;
+  }
 }

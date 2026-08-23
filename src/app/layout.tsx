@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import AppToaster from "@/components/AppToaster";
 import { CartProvider } from "@/components/CartProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "MySkyBuy — Bags, Backpacks & Travel Essentials",
   description: "Bags, backpacks, travel & luggage e-commerce store",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }, { url: "/icon.png" }],
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -19,7 +24,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body>
-        <CartProvider>{children}</CartProvider>
+        <CartProvider>
+          {children}
+          <AppToaster />
+        </CartProvider>
       </body>
     </html>
   );

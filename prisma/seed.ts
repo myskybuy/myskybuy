@@ -14,6 +14,7 @@ function readJson<T>(file: string): T {
 
 async function main() {
   await prisma.order.deleteMany();
+  await prisma.otpCode.deleteMany();
   await prisma.user.deleteMany();
   await prisma.coupon.deleteMany();
   await prisma.product.deleteMany();

@@ -9,6 +9,8 @@
     "lint": "eslint",
     "db:push": "prisma db push",
     "db:seed": "tsx prisma/seed.ts",
+    "db:sync-images": "tsx scripts/sync-images.ts",
+    "images:localize": "node scripts/localize-images.mjs",
     "postinstall": "prisma generate"
   },
   "dependencies": {
@@ -19,7 +21,8 @@
     "prisma": "^6.19.3",
     "razorpay": "^2.9.8",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "sonner": "^2.0.8"
   },
   "devDependencies": {
     "@types/node": "^20",
