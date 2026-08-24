@@ -85,6 +85,35 @@ export async function sendWelcomeEmail(user: { name: string; email: string }) {
   }
 }
 
+export async function sendPasswordResetEmail(email: string, code: string) {
+  if (process.env.NODE_ENV !== "production") {
+    console.log(`[MySkyBuy password reset OTP] ${email}: ${code}`);
+  }
+  if (!transporter) {
+    console.warn("[email] password reset skipped: EMAIL_ENABLED / credentials not set");
+    return false;
+  }
+  try {
+    await transporter.sendMail({
+      from: `"MySkyBuy" <${EMAIL_USER}>`,
+      to: email,
+      subject: "Reset your MySkyBuy password",
+      html: `
+        <div style="font-family:Inter,Arial,sans-serif;max-width:480px;margin:0 auto;">
+          <h2 style="color:#0d5c53;">Reset your password</h2>
+          <p>Use this code to reset your MySkyBuy account password:</p>
+          <p style="font-size:28px;font-weight:800;letter-spacing:6px;">${code}</p>
+          <p>This code expires in 10 minutes. If you didn't request this, you can ignore this email.</p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (err) {
+    logEmailError("password reset failed", err);
+    return false;
+  }
+}
+
 export async function sendOtpEmail(email: string, code: string) {
   if (process.env.NODE_ENV !== "production") {
     console.log(`[MySkyBuy OTP] ${email}: ${code}`);

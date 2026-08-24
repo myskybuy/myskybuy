@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import ForgotPasswordStep from "@/components/ForgotPasswordStep";
 import OtpStep from "@/components/OtpStep";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -21,6 +22,7 @@ export default function AccountPage() {
   const [signupPassword, setSignupPassword] = useState("");
   const [otpEmail, setOtpEmail] = useState<string | null>(null);
   const [orders, setOrders] = useState<Order[]>([]);
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
 
   async function loadAccount() {
     const me = await fetch("/api/auth/me").then((r) => r.json());
@@ -120,7 +122,7 @@ export default function AccountPage() {
     <StoreShell>
       <SiteHeader showSearch={false} />
       <div className="account-page">
-        <h2>{otpEmail ? "Verify email" : "My Account"}</h2>
+        <h2>{otpEmail ? "Verify email" : showForgotPassword ? "Reset password" : "My Account"}</h2>
         {otpEmail ? (
           <OtpStep
             email={otpEmail}
@@ -131,8 +133,16 @@ export default function AccountPage() {
             }}
             onBack={() => setOtpEmail(null)}
           />
+        ) : showForgotPassword ? (
+          <ForgotPasswordStep
+            onDone={() => {
+              setShowForgotPassword(false);
+              loadAccount();
+            }}
+            onBack={() => setShowForgotPassword(false)}
+          />
         ) : null}
-        {otpEmail ? null : (
+        {otpEmail || showForgotPassword ? null : (
           <>
             <div className="account-tabs">
               <button className={tab === "login" ? "active" : ""} onClick={() => setTab("login")}>
@@ -152,6 +162,11 @@ export default function AccountPage() {
                 <div className="form-group">
                   <label>Password</label>
                   <input type="password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} placeholder="Your password" />
+                </div>
+                <div style={{ textAlign: "right", marginBottom: 14 }}>
+                  <button type="button" className="otp-link" onClick={() => setShowForgotPassword(true)}>
+                    Forgot password?
+                  </button>
                 </div>
                 <button className="btn btn-accent" style={{ width: "100%" }} onClick={doLogin}>
                   Log in

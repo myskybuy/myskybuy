@@ -1,16 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { issueOtp, type OtpPurpose } from "@/lib/otp";
+import { issueOtp } from "@/lib/otp";
 import { isValidEmail } from "@/lib/password";
 
 export async function POST(req: NextRequest) {
-  const { email, purpose } = await req.json();
+  const { email } = await req.json();
   const cleanEmail = (email || "").trim().toLowerCase();
-  const otpPurpose: OtpPurpose | "" =
-    purpose === "signup" || purpose === "login" || purpose === "reset" ? purpose : "";
 
-  if (!cleanEmail || !otpPurpose) {
-    return NextResponse.json({ error: "Email and purpose are required" }, { status: 400 });
+  if (!cleanEmail) {
+    return NextResponse.json({ error: "Email is required" }, { status: 400 });
   }
   if (!isValidEmail(cleanEmail)) {
     return NextResponse.json({ error: "Please enter a valid email address" }, { status: 400 });
@@ -18,10 +16,10 @@ export async function POST(req: NextRequest) {
 
   const user = await prisma.user.findUnique({ where: { email: cleanEmail } });
   if (!user) {
-    return NextResponse.json({ error: "Account not found" }, { status: 404 });
+    return NextResponse.json({ error: "No account found with this email" }, { status: 404 });
   }
 
-  const otp = await issueOtp(cleanEmail, otpPurpose);
+  const otp = await issueOtp(cleanEmail, "reset");
   if (!otp.ok) {
     return NextResponse.json({ error: otp.error }, { status: otp.status });
   }

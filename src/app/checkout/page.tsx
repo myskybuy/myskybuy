@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import AuthModal from "@/components/AuthModal";
 import SiteFooter from "@/components/SiteFooter";
@@ -32,6 +32,7 @@ export default function CheckoutPage() {
   const [successId, setSuccessId] = useState<number | null>(null);
   const [razorpayEnabled, setRazorpayEnabled] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState<"COD" | "RAZORPAY">("COD");
+  const [placing, setPlacing] = useState(false);
 
   useEffect(() => {
     fetch("/api/auth/me")
@@ -46,6 +47,8 @@ export default function CheckoutPage() {
       .finally(() => setAuthChecked(true));
     setRazorpayEnabled(!!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID);
   }, []);
+
+  const placingRef = useRef(false);
 
   const subtotal = cartTotal;
   const total = Math.max(0, subtotal - discount);
@@ -73,12 +76,17 @@ export default function CheckoutPage() {
   }
 
   async function placeOrder() {
+    if (placingRef.current) return;
     if (!user) return;
     if (!cart.length) return toast.error("Cart is empty");
     if (!name || !phone || !address) return toast.error("Please fill all required fields");
     if (paymentMethod === "RAZORPAY" && !razorpayEnabled) {
       return toast.error("Online payment is not configured yet. Choose Cash on Delivery or contact support.");
     }
+
+    placingRef.current = true;
+    setPlacing(true);
+    let keepLocked = false;
 
     const payload = {
       items: cart,
@@ -91,52 +99,69 @@ export default function CheckoutPage() {
       paymentMethod,
     };
 
-    const res = await fetch("/api/orders", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    const data = await res.json();
-    if (!res.ok) return toast.error(data.error || "Order failed");
-
-    if (paymentMethod === "RAZORPAY" && data.razorpayOrderId && data.key) {
-      const rzp = new window.Razorpay({
-        key: data.key,
-        amount: data.amount * 100,
-        currency: "INR",
-        name: "MySkyBuy",
-        description: `Order #${data.orderId}`,
-        order_id: data.razorpayOrderId,
-        handler: async (response: { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string }) => {
-          const verify = await fetch("/api/orders", {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              orderId: data.orderId,
-              razorpayOrderId: response.razorpay_order_id,
-              razorpayPaymentId: response.razorpay_payment_id,
-              razorpaySignature: response.razorpay_signature,
-            }),
-          });
-          const verifyData = await verify.json();
-          if (verify.ok) {
-            clearCart();
-            toast.success("Payment successful");
-            setSuccessId(verifyData.orderId);
-          } else {
-            toast.error(verifyData.error || "Payment verification failed");
-          }
-        },
-        prefill: { name, email, contact: phone },
-        theme: { color: "#0d5c53" },
+    try {
+      const res = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
-      rzp.open();
-      return;
-    }
+      const data = await res.json();
+      if (!res.ok) {
+        toast.error(data.error || "Order failed");
+        return;
+      }
 
-    clearCart();
-    toast.success("Order placed");
-    setSuccessId(data.orderId);
+      if (paymentMethod === "RAZORPAY" && data.razorpayOrderId && data.key) {
+        const rzp = new window.Razorpay({
+          key: data.key,
+          amount: data.amount * 100,
+          currency: "INR",
+          name: "MySkyBuy",
+          description: `Order #${data.orderId}`,
+          order_id: data.razorpayOrderId,
+          handler: async (response: { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string }) => {
+            const verify = await fetch("/api/orders", {
+              method: "PUT",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                orderId: data.orderId,
+                razorpayOrderId: response.razorpay_order_id,
+                razorpayPaymentId: response.razorpay_payment_id,
+                razorpaySignature: response.razorpay_signature,
+              }),
+            });
+            const verifyData = await verify.json();
+            if (verify.ok) {
+              clearCart();
+              toast.success("Payment successful");
+              setSuccessId(verifyData.orderId);
+            } else {
+              toast.error(verifyData.error || "Payment verification failed");
+            }
+          },
+          modal: {
+            ondismiss: () => {
+              placingRef.current = false;
+              setPlacing(false);
+            },
+          },
+          prefill: { name, email, contact: phone },
+          theme: { color: "#0d5c53" },
+        });
+        rzp.open();
+        keepLocked = true;
+        return;
+      }
+
+      clearCart();
+      toast.success("Order placed");
+      setSuccessId(data.orderId);
+    } finally {
+      if (!keepLocked) {
+        placingRef.current = false;
+        setPlacing(false);
+      }
+    }
   }
 
   if (successId) {
@@ -244,8 +269,8 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            <button className="btn btn-accent" style={{ marginTop: 20, width: "100%" }} onClick={placeOrder}>
-              Place order (COD)
+            <button className="btn btn-accent" style={{ marginTop: 20, width: "100%" }} onClick={placeOrder} disabled={placing}>
+              {placing ? "Placing order…" : "Place order (COD)"}
             </button>
           </>
         ) : authChecked ? (

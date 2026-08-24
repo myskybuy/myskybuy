@@ -1,8 +1,8 @@
 import crypto from "crypto";
 import { prisma } from "@/lib/db";
-import { sendOtpEmail } from "@/lib/email";
+import { sendOtpEmail, sendPasswordResetEmail } from "@/lib/email";
 
-export type OtpPurpose = "signup" | "login";
+export type OtpPurpose = "signup" | "login" | "reset";
 
 const OTP_TTL_MS = 10 * 60 * 1000;
 const RESEND_MS = 60 * 1000;
@@ -40,7 +40,7 @@ export async function issueOtp(email: string, purpose: OtpPurpose) {
     },
   });
 
-  const sent = await sendOtpEmail(email, code);
+  const sent = purpose === "reset" ? await sendPasswordResetEmail(email, code) : await sendOtpEmail(email, code);
   if (!sent && process.env.NODE_ENV === "production") {
     return { ok: false as const, error: "Could not send verification email. Please try again.", status: 503 };
   }
