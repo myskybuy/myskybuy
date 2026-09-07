@@ -69,6 +69,11 @@ export async function POST(req: NextRequest) {
     if (email && !isValidEmail(email)) {
       return NextResponse.json({ error: "Please enter a valid email address" }, { status: 400 });
     }
+    if (
+      (items as OrderItem[]).some((item) => !item.qty || item.qty < 1 || item.qty > 10)
+    ) {
+      return NextResponse.json({ error: "Each product is limited to a maximum of 10 pieces" }, { status: 400 });
+    }
 
     const method = paymentMethod === "RAZORPAY" ? "RAZORPAY" : "COD";
 

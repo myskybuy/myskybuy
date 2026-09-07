@@ -61,10 +61,28 @@ export default function ProductPage() {
             <span className="price-now">₹{product.salePrice}</span>
             {product.price > product.salePrice ? <span className="price-old">₹{product.price}</span> : null}
           </div>
+          <ul className="product-specs">
+            <li><span>Brand</span> {product.brand}</li>
+            <li><span>Category</span> {product.category}</li>
+            <li><span>SKU</span> #{product.id}</li>
+          </ul>
           <p className="product-desc">{product.description}</p>
+          <div className="product-perks">
+            <span>Cash on Delivery</span>
+            <span>7-day return</span>
+            <span>Ships across India</span>
+          </div>
           <div className="qty-row">
             <label>Quantity</label>
-            <input type="number" min={1} value={qty} onChange={(e) => setQty(Math.max(1, Number(e.target.value)))} />
+            <div className="qty-box">
+              <button type="button" onClick={() => setQty((q) => Math.max(1, q - 1))} disabled={qty <= 1} aria-label="Decrease quantity">
+                −
+              </button>
+              <span>{qty}</span>
+              <button type="button" onClick={() => setQty((q) => Math.min(10, q + 1))} disabled={qty >= 10} aria-label="Increase quantity">
+                +
+              </button>
+            </div>
           </div>
           <div className="product-actions">
             <button

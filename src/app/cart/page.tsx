@@ -57,10 +57,14 @@ export default function CartPage() {
                 <div className="cart-item-info">
                   <strong>{item.name}</strong>
                   <div>₹{item.salePrice}</div>
-                  <div className="qty-controls">
-                    <button type="button" onClick={() => updateQty(item.id, item.qty - 1)}>-</button>
+                  <div className="qty-box">
+                    <button type="button" onClick={() => updateQty(item.id, item.qty - 1)} disabled={item.qty <= 1} aria-label="Decrease quantity">
+                      −
+                    </button>
                     <span>{item.qty}</span>
-                    <button type="button" onClick={() => updateQty(item.id, item.qty + 1)}>+</button>
+                    <button type="button" onClick={() => updateQty(item.id, item.qty + 1)} disabled={item.qty >= 10} aria-label="Increase quantity">
+                      +
+                    </button>
                   </div>
                 </div>
                 <div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { toast } from "sonner";
 
 export type CartItem = {
   id: number;
@@ -19,9 +20,11 @@ type CartContextValue = {
   cartTotal: number;
   cartCount: number;
   isInCart: (id: number) => boolean;
+  getQty: (id: number) => number;
 };
 
 const CART_KEY = "myskybuy_cart";
+export const MAX_CART_QTY = 10;
 const CartContext = createContext<CartContextValue | null>(null);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
@@ -30,7 +33,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(CART_KEY);
-      if (raw) setCart(JSON.parse(raw));
+      if (raw) {
+        const parsed = JSON.parse(raw) as CartItem[];
+        setCart(parsed.map((i) => ({ ...i, qty: Math.min(MAX_CART_QTY, Math.max(1, i.qty || 1)) })));
+      }
     } catch {
       setCart([]);
     }
@@ -42,24 +48,36 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const value = useMemo<CartContextValue>(() => {
     const addToCart = (product: Omit<CartItem, "qty">, qty = 1) => {
+      const add = Math.max(1, qty);
       setCart((prev) => {
         const existing = prev.find((i) => i.id === product.id);
-        if (existing) {
-          return prev.map((i) => (i.id === product.id ? { ...i, qty: i.qty + qty } : i));
+        const current = existing?.qty || 0;
+        if (current >= MAX_CART_QTY) {
+          toast.error("Maximum 10 per product");
+          return prev;
         }
-        return [...prev, { ...product, qty }];
+        const nextQty = Math.min(MAX_CART_QTY, current + add);
+        if (current + add > MAX_CART_QTY) toast.error("Maximum 10 per product");
+        if (existing) {
+          return prev.map((i) => (i.id === product.id ? { ...i, qty: nextQty } : i));
+        }
+        return [...prev, { ...product, qty: nextQty }];
       });
     };
 
     const removeFromCart = (id: number) => setCart((prev) => prev.filter((i) => i.id !== id));
-    const updateQty = (id: number, qty: number) =>
-      setCart((prev) => prev.map((i) => (i.id === id ? { ...i, qty: Math.max(1, qty) } : i)));
+    const updateQty = (id: number, qty: number) => {
+      if (qty > MAX_CART_QTY) toast.error("Maximum 10 per product");
+      const next = Math.min(MAX_CART_QTY, Math.max(1, qty));
+      setCart((prev) => prev.map((i) => (i.id === id ? { ...i, qty: next } : i)));
+    };
     const clearCart = () => setCart([]);
     const cartTotal = cart.reduce((sum, i) => sum + i.salePrice * i.qty, 0);
     const cartCount = cart.reduce((sum, i) => sum + i.qty, 0);
     const isInCart = (id: number) => cart.some((i) => i.id === id);
+    const getQty = (id: number) => cart.find((i) => i.id === id)?.qty || 0;
 
-    return { cart, addToCart, removeFromCart, updateQty, clearCart, cartTotal, cartCount, isInCart };
+    return { cart, addToCart, removeFromCart, updateQty, clearCart, cartTotal, cartCount, isInCart, getQty };
   }, [cart]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
