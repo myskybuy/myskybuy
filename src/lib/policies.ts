@@ -30,7 +30,7 @@ export const policies: Record<string, PolicyContent> = {
           "The item is in original condition with all tags, labels, dust bags, and brand packaging intact.",
           "The product has not been used outdoors, soiled, scratched, or altered in any way.",
           "You provide the original invoice / order number and clear photos if we request them.",
-          "The product matches the SKU and description of the item you ordered.",
+          "The product matches the Product ID and description of the item you ordered.",
         ],
       },
       {

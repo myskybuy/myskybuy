@@ -64,7 +64,7 @@ export default function ProductPage() {
           <ul className="product-specs">
             <li><span>Brand</span> {product.brand}</li>
             <li><span>Category</span> {product.category}</li>
-            <li><span>SKU</span> #{product.id}</li>
+            <li><span>Product ID</span> MSB-{String(product.id).padStart(6, "0")}</li>
           </ul>
           <p className="product-desc">{product.description}</p>
           <div className="product-perks">

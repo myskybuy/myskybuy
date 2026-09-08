@@ -139,7 +139,7 @@ export function buildProductDescription(p: ProductFactsInput) {
 
   const p1 = rotate(p.id, [
     `${p.name} is a ${kind.label} from ${brand}${bits ? ` (${bits})` : ""}. The listing photo matches this title — not a generic category shot — so what you see is the piece you add to cart.`,
-    `This SKU is ${p.name} by ${brand}: a ${kind.label}${bits ? ` in ${bits}` : ""}. Built around the title and product image, not a one-line category blurb.`,
+    `This listing is ${p.name} by ${brand}: a ${kind.label}${bits ? ` in ${bits}` : ""}. Built around the title and product image, not a one-line category blurb.`,
     `${brand}’s ${p.name} shows as a ${kind.label} in the photos${color ? `, with a ${color} finish` : ""}${vol ? ` and about ${vol} of pack space` : ""}.`,
   ]);
 
@@ -154,9 +154,9 @@ export function buildProductDescription(p: ProductFactsInput) {
     : ` Sold as this single listing unless the title names a set.`;
 
   const p3 = rotate(p.id + 7, [
-    `Wipe ${p.name} dry after dusty travel; skip the washing machine. SKU #${p.id} on MySkyBuy. Stock, colour and hardware are confirmed at fulfilment.${combo}`,
-    `Keep ${p.name} away from standing water overnight. Returns need tags within 7 days. This is SKU #${p.id}.${combo}`,
-    `Check zippers when ${p.name} arrives — first wear point. MySkyBuy ships this exact title/image pair as SKU #${p.id}.${combo}`,
+    `Wipe ${p.name} dry after dusty travel; skip the washing machine. Stock, colour and hardware are confirmed at fulfilment.${combo}`,
+    `Keep ${p.name} away from standing water overnight. Returns need tags within 7 days.${combo}`,
+    `Check zippers when ${p.name} arrives — first wear point. MySkyBuy ships this exact title/image pair as shown.${combo}`,
   ]);
 
   return `${p1}\n\n${p2}\n\n${p3}`;
