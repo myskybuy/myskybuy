@@ -117,7 +117,7 @@ export default function CheckoutPage() {
           amount: data.amount * 100,
           currency: "INR",
           name: "MySkyBuy",
-          description: `Order #${data.orderId}`,
+          description: `Order MSB-ORD-${String(data.orderId).padStart(6, "0")}`,
           order_id: data.razorpayOrderId,
           handler: async (response: { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string }) => {
             const verify = await fetch("/api/orders", {

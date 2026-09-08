@@ -48,12 +48,12 @@ export async function sendOrderConfirmationEmail(order: OrderEmail) {
     await transporter.sendMail({
       from: `"MySkyBuy" <${EMAIL_USER}>`,
       to: order.email,
-      subject: `Order #${order.id} confirmed — MySkyBuy`,
+      subject: `Order MSB-ORD-${String(order.id).padStart(6, "0")} confirmed — MySkyBuy`,
       html: `
       <div style="font-family:Inter,Arial,sans-serif;max-width:560px;margin:0 auto;">
         <h2 style="color:#0d5c53;">Your order successfully completed ✅</h2>
         <p>Hi ${order.customerName}, thanks for shopping at MySkyBuy.</p>
-        <p><strong>Order #${order.id}</strong> · ${order.paymentMethod}</p>
+        <p><strong>Order MSB-ORD-${String(order.id).padStart(6, "0")}</strong> · ${order.paymentMethod}</p>
         <table style="width:100%;border-collapse:collapse;margin:16px 0;">${itemsHTML}</table>
         <p style="font-size:18px;font-weight:700;">Total: ₹${order.total}</p>
       </div>
